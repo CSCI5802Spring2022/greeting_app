@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Greeting App</string>
+    <string name="name_hint">Enter your name</string>
+    <string name="display_lower_label">Display Lower</string>
+    <string name="display_label">Display</string>
+    <string name="display_upper_label">Display Upper</string>
+</resources>
