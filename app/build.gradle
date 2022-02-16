@@ -7,6 +7,7 @@ android {
         applicationId "edu.umn.cs.csci5802.greeting"
         testApplicationId "edu.umn.cs.csci5802.greeting.tests"
         minSdkVersion 16
+        //noinspection ExpiredTargetSdkVersion
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -52,3 +53,7 @@ dependencies {
 def getInstrumentation() {
     project.hasProperty('cucumber') ? 'io.cucumber.android.runner.CucumberAndroidJUnitRunner' :'androidx.test.runner.AndroidJUnitRunner'
 }
+
+
+
+
