@@ -11,17 +11,14 @@ on:
 # where will the workflow run
 jobs:
   run_unit_tests:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       # checkout repository
       - name: Checkout
         uses: actions/checkout@v2.4.0
 
-      - name: run tests
+      - name: Run GUI Tests
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 28
-
-      # run GUI tests
-      - name: Execute GUI Tests
-        run: ./gradlew clean connectedDebugAndroidTest
+          script: /gradlew clean connectedDebugAndroidTest
