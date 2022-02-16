@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 28
     buildToolsVersion "28.0.1"
     defaultConfig {
         applicationId "edu.umn.cs.csci5802.greeting"
         testApplicationId "edu.umn.cs.csci5802.greeting.tests"
         minSdkVersion 16
-        targetSdkVersion 29
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner getInstrumentation()
@@ -23,6 +23,11 @@ android {
         unitTests {
             includeAndroidResources = true
         }
+        unitTests.all {
+            testLogging {
+                events 'passed', 'skipped', 'failed'
+            }
+        }
     }
     compileOptions {
         sourceCompatibility 1.8
@@ -35,7 +40,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     testImplementation 'junit:junit:4.12'
-    testImplementation 'org.robolectric:robolectric:4.4'
+    testImplementation 'org.robolectric:robolectric:4.3'
     testImplementation 'org.mockito:mockito-core:1.10.19'
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'

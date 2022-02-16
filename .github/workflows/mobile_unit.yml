@@ -21,7 +21,7 @@ jobs:
       - name: Setup JDK
         uses: actions/checkout@v2.4.0
         with:
-          java-version: 1.8
+          java-version: '8'
 
       # use gradle commands
       - name: Setup Gradle
