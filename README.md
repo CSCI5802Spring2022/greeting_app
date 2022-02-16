@@ -17,4 +17,4 @@ The following commands can be run from the command-line interface inside Android
 * Run GUI tests
     * `./gradlew clean connectedDebugAndroidTest`
 * Run acceptance tests
-    * `./gradlew clean connectedDebugAndroidTest -Pcucumber`
+    * `./gradlew clean -Pcucumber connectedDebugAndroidTest`
