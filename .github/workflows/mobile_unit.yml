@@ -1,5 +1,5 @@
 # workflow name
-name: build and test the app
+name: build and test the app with UNIT tests
 
 
 # when the workflow will be triggered

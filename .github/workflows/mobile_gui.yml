@@ -1,0 +1,27 @@
+# workflow name
+name: build and test the app with GUI tests
+
+
+# when the workflow will be triggered
+on:
+  push:
+    branches:
+      - main
+
+# where will the workflow run
+jobs:
+  run_unit_tests:
+    runs-on: ubuntu-latest
+    steps:
+      # checkout repository
+      - name: Checkout
+        uses: actions/checkout@v2.4.0
+
+      - name: run tests
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 28
+
+      # run GUI tests
+      - name: Execute GUI Tests
+        run: ./gradlew clean connectedDebugAndroidTest
